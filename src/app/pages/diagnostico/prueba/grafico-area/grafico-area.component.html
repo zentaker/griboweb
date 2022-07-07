@@ -1,0 +1,20 @@
+<div class="chart-container">
+<h1 class=" text-center">Analisis por areas del negocio</h1>
+
+<br>
+<ngx-charts-bar-vertical
+
+[scheme]="'vivid'"
+[results]="prueba1"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[xAxisLabel]="xAxisLabel"
+[yAxisLabel]="yAxisLabel"
+(select)="onSelect($event)">
+</ngx-charts-bar-vertical>
+
+</div>

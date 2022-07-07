@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "griboweb"
+  "cli": {
+    "analytics": false
+  }
 }

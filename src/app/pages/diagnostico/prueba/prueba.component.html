@@ -1,0 +1,82 @@
+<div class="animated fadeIn" *ngIf="mostrar2">
+
+
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-botom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img width="50" height="50" src="../../../assets/logo.png" alt="">
+      </a>
+
+      <h4>Chequeo Digital gribo LITE</h4>
+
+    <div class="col-md-3 text-end">
+        <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
+        <button type="button" class="btn btn-success">Contactar</button>
+      </div>
+    </header>
+  </div>
+
+  <br><br><br><br>
+
+
+
+
+
+
+<div class="container">
+
+<form action="#" class="" [formGroup]="respuestasForm" (submit)="sumarResultados()">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="w140">Pregunta</th>
+      <th s>Respuesta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cuestionarios of cuestionario">
+      <th scope="row">{{cuestionarios.pregunta}}</th>
+      <td>
+
+
+
+        <div class="form-check" *ngFor="let respuesta of cuestionarios.respuestas">
+
+
+
+          <input  class="form-check-input" type="radio" formControlName="pregunta{{cuestionarios._id}}" value="{{respuesta.puntuacion}}" id="{{cuestionarios.respuestas.id_resp}}"> {{respuesta.respuesta}}
+        </div>
+
+      </td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+
+<button  type="submit"   class="btn btn-success">Ver resultados</button>
+<br><br><br>
+
+
+ </form>
+
+</div>
+
+</div>
+
+<div class="container" *ngIf="mostrar">
+
+
+<br>
+<app-grafico-area [prueba1]="prueba" ></app-grafico-area>
+
+<br>
+<br><br><br>
+<button routerLink="/home"  class="btn btn-success">Cerrar</button>
+
+</div>

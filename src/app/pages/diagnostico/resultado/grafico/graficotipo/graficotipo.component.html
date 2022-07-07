@@ -1,0 +1,21 @@
+
+
+  <div class="chart-container">
+    <h1>tipo de pregunta</h1>
+     <ngx-charts-bar-vertical-2d
+
+      [scheme]="'vivid'"
+      [results]="results"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)">
+    </ngx-charts-bar-vertical-2d>
+  </div>

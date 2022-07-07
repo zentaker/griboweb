@@ -1,0 +1,68 @@
+<div style="background-color:#BBBAAD;">
+<app-navbar class="animated fadeIn"></app-navbar>
+<div class="animated fadeIn" style="background-color:#BBBAAD;">
+
+  <section class="py-5 text-center .border-top container"  >
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Catálogo de servicios </h1>
+        <p class="lead text-muted">Antes de solicitar un servicio, gribo recomienda que primero realicen un diagnóstico para saber el estatus inicial de su empresa y poder tomar una mejor decisión de que implementar primero .</p>
+        <p>
+          <button   routerLink="/diagnostico" type="button" class="btn btn-success"> Ir a Diagnóstico</button>
+
+
+        </p>
+
+        <p>
+
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <div class="animated fadeIn album py-5 bg-light">
+    <div class="container">
+      <h3>Filtros</h3>
+      <div class="btn-group mb-5" role="group" aria-label="Basic outlined example">
+        <button (click)="catGo('desarrollo')" type="button" class="btn btn-outline-success">Desarrollo</button>
+        <button (click)="catGo('estrategia')" type="button" class="btn btn-outline-success">Estrategia</button>
+        <button (click)="catGo('pymes')" type="button" class="btn btn-outline-success">Pymes</button>
+        <button (click)="catGo('diseño')" type="button" class="btn btn-outline-success">Diseño</button>
+        <button (click)="catGo('independientes')" type="button" class="btn btn-outline-success">Independientes</button>
+        <button (click)="catGo('redes')" type="button" class="btn btn-outline-success">Redes Sociales</button>
+      </div>
+
+      <div id="cat" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+
+        <div  class="col" *ngFor="let filtros of filtro">
+          <div class="card shadow-sm">
+            <img [src]="filtros.img" alt="">
+
+            <div class="card-body">
+              <p class="card-text">{{filtros.txt}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="http://wa.link/apwvsp" type="button" class="btn btn-success">{{filtros.contacto}}</a>
+
+                </div>
+                <small class="text-muted">{{filtros.tipo}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<section>
+  <jjva-ngx-whatsapp-button style="margin-top: 10%" [ngx_whatsapp_phone]="phone" [ngx_whatsapp_text]="title"></jjva-ngx-whatsapp-button>
+</section>
